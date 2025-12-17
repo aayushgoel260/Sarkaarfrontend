@@ -1,0 +1,18 @@
+<div class="tambola-container">
+  <h2>Tambola Game</h2>
+  <p>Tambola (also called Housie or Bingo) is a game played with tickets containing random numbers. Mark numbers as they are called out. First to complete a row, column, or full ticket wins!</p>
+
+  <button class="generate-btn" (click)="generateTicket()">Generate New Ticket</button>
+
+  <div class="ticket">
+    <table>
+      <tbody>
+        <tr *ngFor="let row of ticket">
+          <td *ngFor="let cell of row" [class.empty]="!cell">
+            {{ cell ? cell : '' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { Index } from './index/index';
 
 import { Dashboard } from './dashboard/dashboard';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: Login },
@@ -13,4 +14,8 @@ export const routes: Routes = [
   { path: 'index', component: Index },
   { path: 'dashboard', component: Dashboard },
   { path: 'game', component: Landingpage },
+  {
+    path: 'tambola',
+    loadComponent: () => import('./tambola/tambola.component').then(m => m.TambolaComponent)
+  },
 ];
