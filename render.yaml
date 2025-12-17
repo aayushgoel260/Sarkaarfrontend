@@ -1,0 +1,5 @@
+
+staticPublishPath: dist/Sarkaar_webapp
+routes:
+  - type: rewrite
+       source: /*
