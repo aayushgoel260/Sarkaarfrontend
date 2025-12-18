@@ -31,7 +31,7 @@ export class Signup {
       password: this.password,
       roleId: this.roleId
     };
-    this.http.post('http://localhost:5046/signup', payload).subscribe({
+    this.http.post('https://sarkaarbackend-2.onrender.com/signup', payload).subscribe({
       next: (res: any) => {
         console.log('Signup response:', res);
         this.successMsg = 'Signup successful! Redirecting to login...';

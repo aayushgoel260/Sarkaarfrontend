@@ -27,7 +27,7 @@ export class Login {
       email: this.email,
       password: this.password
     };
-    this.http.post('http://localhost:5046/login', payload).subscribe({
+    this.http.post('https://sarkaarbackend-2.onrender.com/login', payload).subscribe({
       next: (res: any) => {
         // Expecting backend to return { username, email, roleid }
         if (res && res.username && res.roleid) {
